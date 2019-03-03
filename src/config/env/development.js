@@ -1,0 +1,5 @@
+export const devConfig={
+	secret:'FUCK_YOU_MAN',
+};
+
+//authentication key: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjNmI3NGU2NzAyMTk4M2FjY2FiZGI3OCIsImlhdCI6MTU1MDU5OTI2MiwiZXhwIjoxNTUwNjg1NjYyfQ.9qp5lrxAcEH3OQ_FqJjNjqnMb_IHdpAyN0mDoF6gP4c
