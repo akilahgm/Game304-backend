@@ -6,11 +6,15 @@ export const playerRouter = express.Router();
 
 playerRouter.post('/getKey', PlayerController.getKey);
 playerRouter.post('/createTeam', PlayerController.createTeam);
-playerRouter.post('/distribute', passport.authenticate('jwt',{session:false}), PlayerController.distribute);
-playerRouter.post('/showTeams', passport.authenticate('jwt',{session:false}), PlayerController.showTeams);
-playerRouter.post('/addPlayer', passport.authenticate('jwt',{session:false}), PlayerController.addPlayer);
-playerRouter.post('/bid', passport.authenticate('jwt',{session:false}), PlayerController.bid);
-playerRouter.post('/play', passport.authenticate('jwt',{session:false}), PlayerController.play);
+playerRouter.post('/distribute', PlayerController.distribute);
+playerRouter.post('/showTeams', PlayerController.showTeams);
+playerRouter.post('/addPlayer', PlayerController.addPlayer);
+playerRouter.post('/bid',  PlayerController.bid);
+playerRouter.post('/selectTrump',  PlayerController.selectTrump);
+playerRouter.post('/play', PlayerController.play);
+playerRouter.post('/getTeam', PlayerController.getTeam);
+playerRouter.post('/getGameStatus', PlayerController.getGameStatus);
+playerRouter.post('/addMonitor', PlayerController.addMonitor);
 
 
 

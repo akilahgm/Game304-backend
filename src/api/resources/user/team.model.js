@@ -20,6 +20,9 @@ const teamSchema = new Schema({
 	player4:{
 		type:String,
 	},
+	cards:{
+		type:Object,
+	},
 	bidPoint:{
 		type:Number,
 	},
@@ -27,7 +30,7 @@ const teamSchema = new Schema({
 		type:String,
 	},
 	trump:{
-		type:String,
+		type:Object,
 	},
 	monitorId:{
 		type:String,
@@ -37,7 +40,13 @@ const teamSchema = new Schema({
 	},
 	couple2:{
 		type:String,
-	}
+	},
+	point:{
+		type:Number,
+	},
+	gameStatus:{
+		type:String,
+	},
 });
 
 export default mongoose.model('Team', teamSchema);

@@ -9,10 +9,13 @@ import {configJWTStrategy} from './api/middlewares/passport-jwt';
 const app = express();
 const PORT = 3000;
 
+
+//require('./api/resources/user/playerController.js')(io);
+
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-app.use(passport.initialize())//req.driver
+app.use(passport.initialize())//req.player
 configJWTStrategy();
 
 connect();
@@ -22,12 +25,14 @@ app.use(logger('dev'));
 app.use('/api',restRouter);
 
 
+
 app.use((req, res, next) => {
   const error = new Error('Not found');
   error.message = 'Invalid route';
   error.status = 404;
   next(error);
 });
+
 app.use((error, req, res, next) => {
   res.status(error.status || 500);
   return res.json({
@@ -40,3 +45,5 @@ app.use((error, req, res, next) => {
 app.listen(PORT, () => {
   console.log(`Server is running at PORT http://localhost:${PORT}`);
 });
+
+

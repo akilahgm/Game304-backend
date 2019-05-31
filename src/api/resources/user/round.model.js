@@ -8,25 +8,28 @@ const roundSchema = new Schema({
 		type: String,
 		required: true,
 	},
-	round1:{
-		type:Array,
+	roundNo:{
+		type:Number,
 	},
-	round2:{
-		type:Array,
+	player1:{
+		type:Object,
 	},
-	round3:{
-		type:Array,
+	player2:{
+		type:Object,
 	},
-	round4:{
-		type:Array,
+	player3:{
+		type:Object,
 	},
-	round5:{
-		type:Array,
-	},
-	round6:{
-		type:Array,
+	player4:{
+		type:Object,
 	},
 	monitorId:{
+		type:String,
+	},
+	attemptCount:{
+		type:Number,
+	},
+	roundType:{
 		type:String,
 	}
 });
